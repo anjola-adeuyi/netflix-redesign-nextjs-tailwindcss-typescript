@@ -1,4 +1,4 @@
-import {BellIcon, SearchIcon} from '@heroicons/react/solid'
+import { BellIcon, SearchIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
 
 const Headers = () => {
@@ -24,7 +24,7 @@ const Headers = () => {
       <div>
         <SearchIcon className="hidden h-6 w-6 sm:inline" />
         <p className="hidden lg:inline">Kids</p>
-        <BellIcon classname="h-6 w-6" />
+        <BellIcon className="h-6 w-6" />
         <Link href="/account">
           <img src="" alt="" />
         </Link>
