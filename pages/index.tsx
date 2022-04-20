@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+
+import Banner from '../components/Banner'
 import Headers from '../components/Headers'
 
 const Home: NextPage = () => {
@@ -11,12 +12,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      Let's build Netflix
-
       <Headers />
-
       <main>
-        {/* Banner */}
+        <Banner />
         <section>
           {/* Row */}
           {/* Row */}
