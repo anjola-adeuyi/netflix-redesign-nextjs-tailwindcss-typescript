@@ -11,10 +11,15 @@ interface Props {
 
 const Banner = ({ netflixOriginals }: Props) => {
   const [movie, setMovie] = useState<Movie | null>(null);
+  const [heroOverviewText, setHeroOverviewText] = useState<string | undefined>("");
 
   useEffect(() => {
     setMovie(netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]);
   }, [netflixOriginals])
+  
+  useEffect(() => {
+    setHeroOverviewText(movie?.overview && movie?.overview?.length > 250 ? movie?.overview.substring(0, 250) + "..." : movie?.overview);
+  }, [movie])
   
   return (
     <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12">
@@ -23,7 +28,7 @@ const Banner = ({ netflixOriginals }: Props) => {
       </div>
 
       <h1 className="text-2xl md:text-4xl lg:text-7xl">{movie?.title || movie?.name || movie?.original_name}</h1>
-      <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">{movie?.overview}</p>
+      <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">{heroOverviewText}</p>
 
       <div className="flex space-x-3">
         <button className="bannerButton bg-white text-black"> <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" /> Play</button>
