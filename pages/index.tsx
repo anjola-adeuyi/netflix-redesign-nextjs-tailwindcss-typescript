@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import Banner from '../components/Banner'
 import Headers from '../components/Headers'
+import Row from '../components/Row'
 import { Movie } from '../typings'
 import requests from '../utils/requests'
 
@@ -40,12 +41,12 @@ const Home = ({
       <main className='relative pl-4 pb-24 lg:space-y-24 lg:pl-16'>
         <Banner netflixOriginals={netflixOriginals} />
         <section>
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+          <Row />
+          <Row />
         </section>
       </main>
       
