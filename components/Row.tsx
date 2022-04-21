@@ -4,6 +4,9 @@ import Thumbnail from "./Thumbnail";
 
 interface Props {
   title: string;
+
+  // when using firebase
+  // movie: Movie[] | DocumentData[]
   movies: Movie[]
 }
 
